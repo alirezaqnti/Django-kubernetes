@@ -1,11 +1,6 @@
-from pathlib import Path
+DEBUG = False
+SECRET_KEY = NotImplemented
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-
-
-SECRET_KEY = "django-insecure-ltfzpqo2(y1!r_tq0$n4-iut@0_=bcv-+%94kgq^1(3s2mv&56"
-
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -53,7 +48,7 @@ WSGI_APPLICATION = "core.core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": "/home/salamatid/Programming/Django-Kubernetes/core/db.sqlite3",
     }
 }
 
