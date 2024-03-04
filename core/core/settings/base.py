@@ -44,8 +44,12 @@ WSGI_APPLICATION = "core.core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "/home/salamatid/Programming/Django-Kubernetes/core/db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "djangokubernetes",
+        "HOST": "localhost",
+        "PORT": "5432",
+        "USER": "alirezaqanati",
+        "PASSWORD": "Agh050797",
     }
 }
 

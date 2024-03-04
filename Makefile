@@ -26,10 +26,10 @@ runserver:
 superuser:
 	poetry run python3 -m core.manage createsuperuser
 
-# .PHONY: up-dependency-only
-# up-dependency-only:
-# 	test .env || touch .env
-# 	sudo docker-compose -f docker-compose.dev.yaml up --force-recreate db
+.PHONY: up-dependency-only
+up-dependency-only:
+	test .env || touch .env
+	sudo docker-compose -f docker-compose.dev.yaml up --force-recreate db
 
 
 .PHONY: update
