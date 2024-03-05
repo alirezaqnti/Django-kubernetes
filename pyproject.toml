@@ -22,6 +22,10 @@ pyyaml = "^6.0.1"
 python-dotenv = "^1.0.1"
 platformdirs = "^4.2.0"
 colorlog = "^6.8.2"
+pytest = "^8.1.0"
+pytest-xdist = "^3.5.0"
+pytest-django = "^4.8.0"
+model-bakery = "^1.17.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -31,6 +35,12 @@ pre-commit = "^3.6.2"
 multi_line_output = 5
 line_length = 119
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.core.settings"
+django_find_project = false
+python_files = "test_*.py"
+testpaths = ["core"]
+filterwarnings = "ignore:: DeprecationWarning:^(?! node\\.).*:"
 
 [tool.yapf]
 based_on_style = "google"
